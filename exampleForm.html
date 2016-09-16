@@ -1,0 +1,25 @@
+<html ng-app="ngModelExamples"> 
+<head>
+    <script src="angular.js"> </script>
+    <script src="app.js"> </script>
+</head>
+
+<body ng-controller="exampleCtrl">
+    <h1> NG Model Examples </h1>
+    <p>FirstName : <input type="text" ng-change="validateName()" ng-model="firstName"> </input> </p>
+    <p>AgreeBoolean  : <input type="checkbox" ng-model="isCorrect"> </input> </p>
+    <p>Birth Date : <input type="date" ng-model= "birthDate"></input></p>
+    <p>
+        Choose your Veteran status
+        <input type="radio" ng-model="veteranStatus" value="opt1"> Yes, I am a veteran, recently retired </input>
+        <input type="radio" ng-model="veteranStatus" value="opt2"> No, I am not a veteran</input>
+        <input type="radio" ng-model="veteranStatus" value="opt3"> I am a protected veteran</input>
+    </p>
+
+    <div>
+        <p ng-if="isCorrect">
+        Hello {{firstName}}, you were born on {{birthDate}}, and your veteran status is {{veteranStatus}}</p>
+    </div>
+</body>
+
+</html>
